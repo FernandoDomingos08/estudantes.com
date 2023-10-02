@@ -1,0 +1,410 @@
+@charset "UTF-8";
+@font-face{
+    font-family: Personalizada;
+    src: url("");
+}
+:root{
+    --transparente_branco: rgb(250,250,250,0.5);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.container{
+    width: 100%;
+}
+/* Este comando serve para editar a barra de rolagem */
+::-webkit-scrollbar{
+    background:rgb(255, 255, 255);
+    width: 10px;
+    border-radius: 30px;
+    margin: 10rem 2px 10rem 0px;
+}
+::-webkit-scrollbar-thumb{
+    background: blue;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    cursor: pointer;
+}
+/* «««««««««««««« Estilizando o menu de navegação »»»»»»»»»»» */
+nav.navegation {
+    display:block;
+    height: 8rem;
+    background: #eee;
+    padding: 10px;
+    transition: all ease-in .3s;
+    margin:0px 0px 5px 0px;
+    box-sizing: border-box;
+    box-shadow: 0rem 0rem 1rem 0rem rgb(0,0,0,0.5);
+}
+.navegation.active{
+    background: #929292;
+}
+.logo{
+    cursor: pointer;
+}
+div.down{
+    display: flex;
+    justify-content: space-between;
+}
+div.sub_itens img{
+    margin: 3px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    /* Este comando serve para colocar o reflexo */
+    -webkit-box-reflect: below 2px linear-gradient(#0001, #0001);
+}
+div.sub_itens a{
+    border: none;
+    text-decoration: none;
+}
+div.sub_itens a img:hover{
+    transition: all ease-in-out .2s;
+    transform: translateY(3px);
+}
+.modelo{
+    position: absolute;
+    cursor:pointer;
+}
+.modelo:hover{
+    transition: all ease-in-out .2s;
+    transform: translateY(3px);
+}
+.modelo.active{
+    transition: all ease-in-out .1s;
+}
+div.up{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 150px 0px 250px;
+}
+.pesq{
+    display: flex;
+    justify-content: space-between;
+}
+.icon_search{
+    border-radius: 50%;
+    background: #a1a1a1;
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    position: relative;
+    transition: all .3s;
+}
+.icon_search:hover{
+    transition: all .3s;
+    transform: translateX(7px);
+}
+.img_search{
+    position: relative;
+    top: 8px;
+    left:0;
+}
+.input_search{
+    outline: none;
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid#a1a1a1;
+    background: transparent;
+}
+ul.navegacao li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px 10px 0px 10px;
+}
+ul.navegacao li a{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color:dodgerblue;
+    font-size: 13pt;
+    text-decoration: none;
+    transition: all .1s;
+}
+ul.navegacao li a:hover{   
+    transition: all .1s;
+    color: #000;
+    font-weight: bolder;
+}
+/* ????????????????????????? FIM DO MENU DE NAVEGACAO ????????? */
+
+/* «««««««««««««««««««« Estilizando A sessão »»»»»»»»»»»»»»»»»»»*/
+.sectio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background:url("../_imagens/sessao/kali-layers-16x9.png"), no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    /* animation: filtro 10s linear infinite; */
+    position: relative;
+ 
+}
+.sectio.active{
+    background:url("../_imagens/sessao/kali-abstract-sky-16x9.png");
+}
+@keyframes filtro{
+    0%{
+         filter: hue-rotate(0deg);
+    }
+    100%{
+         filter: hue-rotate(360deg);
+    }
+}
+.conteudo{
+    display:block;
+    position: absolute;  
+    top: 210px;
+    left: 110px;  
+}
+.h1_titulo{
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 27pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.h2_titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23pt;
+    margin-top: 5px;
+    color: #fff;
+}
+.btn_click{
+    margin-top: 10px;
+    border: none;
+    background: #fff;
+    width: 9rem;
+    height: 2.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13pt;
+    font-weight:bolder;
+    color:#fff;
+    background: transparent;
+    border: solid 2px rgb(6, 113, 219);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.btn_click:hover{
+    animation: baunce 1s;
+}
+@keyframes baunce{
+    0%,20%,60%,100%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40%{
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    80%{
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+}
+.btn_log{
+    background: #fff;
+    width: 11rem;
+    height: 2.7rem;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: none;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13pt;
+    font-weight:bolder;
+    animation:  vibrar 0.5s ease-in-out infinite both;
+}
+@keyframes vibrar{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+   100%{
+        transform: scale(1);
+    }
+}
+.btn_log:hover{
+    animation: none;
+    background: #000;
+    color: #fff;
+    transition: all .3s;
+}
+.btn_next_back{
+    position:absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn_next_back div{
+    display: inline-block;
+}
+.btn_next_back img{
+    width: 45px;
+    height: 45px;
+    margin: 15px;
+    transition: all ease-in .2s;
+    cursor: pointer;
+}
+div.btn_next_back .btn_back:hover{
+    transition: all ease-in .1s;
+    transform: translateX(-7px);
+}
+.btn_back{
+    position: absolute;
+}
+.btn_back.active{
+    cursor: pointer;
+}
+div.btn_next_back .btn_next:hover{
+    transition: all ease-in .1s;
+    transform: translateX(7px);
+}
+/* ««««««««««««« balls »»»»»»»»»»»»»»»»» */
+.balls{
+    position:absolute;
+    top: 245px;
+    left: 82%;
+}
+.balls div{
+    display:inline-block;
+    border-radius: 50%;
+    border: #fff 2px solid;
+    width: 15px;
+    height: 15px;
+    margin: 3px;
+    cursor: pointer;
+    transition: all ease-in 0.1s;
+}
+.balls div:hover{
+    transition: all ease-out 0.1s;
+    background: #ccc;
+}
+ /* ««««««««««««««« Fim balls »»»»»»»»»»»»»»»»»»»»*/
+/* 
+.section .loard{
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+.section .loard span{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(18deg * var(--i)));
+}
+.section .loard span:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+    background: #00ff00;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate {
+    0%{ 
+        transform: scale(1);
+    }
+    80%,100%{
+         transform: scale(0);
+    }
+} */
+/*«««««««««««««««««««««« Responsividade »»»»»»»»»»»»»»»»»»*/
+.artigo{
+    display:flex;
+    background: #fff;
+}
+/* «««««««««««««««««« Estilizacoa do box-conteudo »»»»»»»»»»»»» */
+.cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+}
+.cont .box_conteudo div{
+    height:230px;
+    overflow: hidden;
+    margin-bottom: 25px;
+
+}
+#img_1{
+    background: url("../_imagens/_web/01.jpg"), no-repeat;
+    background-size: 100%;
+}
+#img_2{
+    background: url("../_imagens/_web/02.jpg"), no-repeat;
+    background-size: 100%;
+}
+#img_3{
+    background: url("../_imagens/_web/03.jpg"), no-repeat;
+    background-size: 100%;
+}
+.cont .box_conteudo h1{
+    margin: 15px 0px 15px 25px;
+    font-size:15pt;
+    font-family:  "Poppins", sans-serif;
+    font-weight: 900;
+}
+.cont .box_conteudo p{
+    font-family:  "Poppins", sans-serif;
+    font-size: 11pt;
+    font-weight: 500;
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 1.3rem;
+    margin: 10px 10px 0px 10px;
+    color: #3d3d3d;
+}
+.cont .box_conteudo button{
+    margin: 20px 0px 10px 25px;
+    width: 19rem;
+    height: 2.7rem;
+    border: none;
+    border-radius: 10px;
+    background: rgb(6, 120, 235);
+    color: #fff;
+    font-size: 11pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+     box-sizing: border-box;
+     
+
+}
+.cont .box_conteudo{
+    width:360px;
+    height: 560px;
+    margin:15px;
+    border-radius: 15px;
+    background: #fff;
+    cursor: pointer;
+    transition: all .1s ease-in;
+}
+.cont .box_conteudo:hover{
+    transition: all .1s ease-out;
+    transform: translateY(10px);
+    box-shadow: 0rem 2rem 3rem rgb(0,0,0,0.3);
+}
+/* «««««««««««««««««« Fim box-conteudo »»»»»»»»»»»»» */
+/* «««««««««««««««««« Estilizar o Footer »»»»»»»»»»»» */
+.rodape{
+    height: 400px;
+    width: 100%;
+    background: #929292;
+}
+/* «««««««««««««««««« Estilizar o Footer »»»»»»»»»»»» */
+@media screen and (max-width: 730px){
+    
+}

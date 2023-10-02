@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>WebMaster</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Fernando Mateus Domingos">
+    <meta name="description" content="Sem descricao">
+    <meta http-equiv="refresh" content="900">
+    <link rel="stylesheet" href="_css/style-index.css">
+    <link rel="icon" href="_icon/URL_index.png">
+    <script src="_javascript/script-index.js"></script>
+    <base href="">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navegation">
+                <div class="down">
+                    <a href="index.html" target="_self">
+                        <img class="logo" src="_icon/URL_index.png" alt="logo">
+                    </a>
+                    <div class="sub_itens">
+                        <img class="modelo" src="_icon/sol1.png" alt="">
+                        <script src="_javascript/Modelo.js">
+                            // Script do Modelo Dack esta localizado na pasta javascript
+                        </script>
+                        <a class="login" href="../Site_de_imagens/index.html" target="_self">
+                            <img src="_icon/login2.png" alt="">
+                        </a>
+                        <a class="sair" href="../Site_de_imagens/index.html" target="_self">
+                            <img src="_icon/sair.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="up">
+                    <ul class="navegacao">
+                        <li><a href="" target="_self">Início</a></li>
+                        <li><a href="" target="_self">Cursos</a></li>
+                        <li><a href="" target="_self">Livros</a></li>
+                        <li><a href="" target="_self">História</a></li>
+                        <li><a href="" target="_self">Sobre</a></li>
+                    </ul>
+                    <div class="pesq">
+                        <input type="search" name="search" formaction="pesquisa.php" class="input_search"
+                            placeholder="O que desejas saber" spellcheck="true" autocomplete>
+                        <a href="../Site_de_imagens/index.html" target="_self">
+                            <div class="icon_search">
+                                <img class="img_search" src="_icon/pesquisar2.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="sectio">
+            <div class="btn_next_back">
+                <div class="back">
+                    <img src="_icon/btn_back.png" alt="back" class="btn_back">
+                    <script>
+                        const btn_back = document.querySelector('.btn_back');
+                        const sectio = document.querySelector('.sectio');
+
+                        btn_back.onclick = function () {
+                            this.classList.toggle('active')
+                            sectio.classList.toggle('active')
+                        }
+                        function erro() {
+                            window.confirm(`Desculpa estamos com problema \u{1F693} ao apresentar outras imagens estamos a trabalhar this.`);
+                        }
+                    </script>
+                </div>
+                <div class="balls">
+                    <div class="0" onclick="erro()"></div>
+                    <div class="1" onclick="erro()"></div>
+                    <div class="2" onclick="erro()"></div>
+                    <div class="3" onclick="erro()"></div>
+                    <div class="4" onclick="erro()"></div>
+                </div>
+                <div class="next">
+                    <img src="_icon/btn_next.png" alt="next" class="btn_next" onclick="erro()">
+                </div>
+            </div>
+            <div class="conteudo">
+                <h1 class="h1_titulo"> Welcame in page set</h1>
+                <h2 class="h2_titulo">Criada por Fernando Domingos</h2>
+                <a href="../Calculadora/index.html" target="_self">
+                    <button type="submit" class="btn_click">Click-me</button>
+                </a>
+                <a href="../Calculadora/index.html" target="_self">
+                    <button type="submit" class="btn_log">Log In</button>
+                </a>
+                <!-- </div>
+            <div class="section">
+                <div class="loard">
+                    <span style="--i:1;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:3;"></span>
+                    <span style="--i:4;"></span>
+                    <span style="--i:5;"></span>
+                    <span style="--i:6;"></span>
+                    <span style="--i:7;"></span>
+                    <span style="--i:8;"></span>
+                    <span style="--i:9;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                </div>
+            </div> -->
+        </section>
+        <article class="artigo">
+            <div class="cont">
+                <div class="box_conteudo">
+                    <div id="img_1"></div>
+                    <h1 class="box_1_titulo">Desenvolvimento Web</h1>
+                    <p >
+                        A linguagem JavaScript foi criada pela Netscape Communications
+                        Corporation junto com a Sun Microsystems. Sua primeira versão foi
+                        lançada em 1995. Na época, quem dominava o mercado de browsers era o
+                        Netscape Navigator. Após, tivemos um período bastante conturbado de
+                        guerra entre browsers, no qual códigos da linguagem funcionavam em um
+                        navegador e não funcionavam em outro.
+                    </p>
+                    <a href="">
+                        <button class="box_btn">Visitar <span>&rarr;</span></button>
+                    </a>
+                </div>
+                <div class="box_conteudo">
+                    <div id="img_2"></div>
+                    <h1 class="box_2_titulo">Desenvolvimento Mobile</h1>
+                    <p >
+                        A linguagem JavaScript foi criada pela Netscape Communications
+                        Corporation junto com a Sun Microsystems. Sua primeira versão foi
+                        lançada em 1995. Na época, quem dominava o mercado de browsers era o
+                        Netscape Navigator. Após, tivemos um período bastante conturbado de
+                        guerra entre browsers, no qual códigos da linguagem funcionavam em um
+                        navegador e não funcionavam em outro.
+                    </p>
+                    <a href="">
+                        <button class="box_btn">Visitar <span>&rarr;</span></button>
+                    </a>
+                </div>
+                <div class="box_conteudo">
+                    <div id="img_3"></div>
+                    <h1 class="box_3_titulo">Desenvolvimento Desktop</h1>
+                    <p>
+                        A linguagem JavaScript foi criada pela Netscape Communications
+                        Corporation junto com a Sun Microsystems. Sua primeira versão foi
+                        lançada em 1995. Na época, quem dominava o mercado de browsers era o
+                        Netscape Navigator. Após, tivemos um período bastante conturbado de
+                        guerra entre browsers, no qual códigos da linguagem funcionavam em um
+                        navegador e não funcionavam em outro.
+                    </p>
+                    <a href="">
+                        <button class="box_btn">Visitar <span>&rarr;</span></button>
+                    </a>
+                </div>
+            </div>
+        </article>
+        <aside class="delado">
+
+        </aside>
+        <footer class="rodape">
+            <hr class="divisor">
+            <address class="endereco">
+                &copy; Fernando Mateus Domingos
+            </address>
+        </footer>
+    </div>
+</body>
+
+</html>
